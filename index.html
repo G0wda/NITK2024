@@ -264,7 +264,22 @@ if (body.classList.contains('dark-mode')) {
     <div id="particles-1" class="particles"></div>
     </div>
   </header>
+  <script>
+    window.botpressWebChat.init({
+      host: 'https://cdn.botpress.cloud/webchat/v2.2/inject.js',
+      botId: 'd04b510d-0692-411c-aef9-e6460bc29cad',
+      events: {
+        onEvent: function (event) {
+          if (event.type === 'show') {
+            window.botpressWebChat.show();
+      }
+    }
+  }
+});
 
+  </script>
+ 
+  
   <!-- Cookie Consent Popup -->
   <div id="cookieConsent" class="cookie-consent">
     <h4>🍪Cookies Consent <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#175394" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cookie-icon">
